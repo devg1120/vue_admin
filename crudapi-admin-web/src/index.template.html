@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= productName %></title>
+
+    <meta charset="utf-8">
+    <meta name="description" content="<%= productDescription %>">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width<% if (ctx.mode.cordova || ctx.mode.capacitor) { %>, viewport-fit=cover<% } %>">
+
+    <link rel="icon" type="image/png" sizes="128x128" href="crudapi.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="crudapi.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="crudapi-mini.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="crudapi-mini.png">
+    <link rel="icon" type="image/ico" href="favicon.ico">
+    <script>
+      var _hmt = _hmt || [];
+      (function() {
+        if (window.location.hostname === "demo.crudapi.cn") {
+          console.info("init baidu tongji!");
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?a0e821480ca003494b25d3da237dfc93";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        } else {
+          console.info("skip baidu tongji!");
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <!-- DO NOT touch the following DIV -->
+    <div id="q-app"></div>
+  </body>
+</html>

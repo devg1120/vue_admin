@@ -1,0 +1,17 @@
+---
+import MainLayout from '@layouts/MainLayout.astro'
+import Profile from '@components/Profile.vue'
+
+
+export function getStaticPaths() {
+  return [
+    {params: {name: 'Alejandro'}},
+  ]
+}
+
+const { name } = Astro.params
+---
+
+<MainLayout>
+  <Profile name={name} />
+</MainLayout>

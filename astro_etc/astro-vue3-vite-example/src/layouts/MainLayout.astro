@@ -1,0 +1,21 @@
+---
+import { ViewTransitions } from 'astro:transitions';
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body>
+		<div class="bg-gray-100 h-screen flex items-center justify-center">
+			<div class="bg-white p-10 rounded-lg shadow-md grid gap-5">
+				<slot />
+			</div>
+		</div>
+		<ViewTransitions />
+	</body>
+</html>

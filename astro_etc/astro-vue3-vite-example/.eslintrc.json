@@ -1,0 +1,43 @@
+{
+    "extends": ["airbnb-base"],
+    "overrides": [
+        {
+            "files": ["./src/**/*.vue", "./src/**/*.ts"],
+            "excludedFiles": [],
+            "env": {
+                "browser": true,
+                "es2021": true
+            },
+            "parserOptions": {
+                "parser": "@typescript-eslint/parser"
+            },
+            "extends": ["plugin:vue/strongly-recommended", "eslint:recommended", "@vue/typescript/recommended", "prettier"],
+            "plugins": ["@typescript-eslint", "prettier"],
+            "rules": {
+                "prettier/prettier": "error",
+                "import/no-unresolved": "off",
+                "import/extensions": "off",
+                "no-undef": "off",
+                "no-shadow": "off",
+                "no-param-reassign": "off",
+                "no-plusplus": "off",
+                "class-methods-use-this": "off",
+                "vue/component-tags-order": [
+                    "error",
+                    {
+                        "order": [["script", "template"], "style"]
+                    }
+                ],
+                "vue/padding-line-between-blocks": ["error", "always"],
+                "lines-between-class-members": ["error", "always", { "exceptAfterSingleLine": true }],
+                "import/prefer-default-export": "off",
+                "vue/no-setup-props-destructure": "off",
+                "vue/no-dupe-keys": "off",
+                "vue/valid-v-model": "off",
+                "vue/no-v-model-argument": "off",
+                "vue/multi-word-component-names": "off",
+                "import/no-extraneous-dependencies": "off"
+            }
+        }
+    ]
+}
